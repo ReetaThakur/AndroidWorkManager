@@ -61,3 +61,37 @@ class MainActivity : AppCompatActivity() {
 
     }
 }
+
+/*
+          Work Manager = WorkManager is an API that makes it easy to schedule reliable,
+                          asynchronous tasks that are expected to run even if the app exits
+                          or the device restarts.that is guaranteed to execute sometime
+                          after its Constraints are met.
+
+                          There are two types of work supported by WorkManager:
+                          OneTimeWorkRequest and PeriodicWorkRequest.
+
+               A WorkRequest has an associated id that can be used for lookups and
+               observation.
+
+         Features :-
+
+       1)  Work Constraints :-Declaratively define the optimal conditions for your work to
+                              run using Work Constraints. (For example, run only when the
+                              device is on Wi-Fi, when the device is idle, or when it has
+                              sufficient storage space, etc.)
+
+      2) Robust Scheduling :- WorkManager allows you to schedule work to run one- time or
+                              repeatedly using flexible scheduling windows.
+
+        And Scheduled work is stored in an internally managed SQLite database.
+
+     3) Flexible Retry Policy :- Sometimes work fails. WorkManager offers flexible retry policies.
+
+     4) Work Chaining :- For complex related work, chain individual work tasks together
+
+     ex:- WorkManager.getInstance(...)
+    .beginWith(listOf(workA,workB))
+    .then(workC)
+    .enqueue()
+*/
